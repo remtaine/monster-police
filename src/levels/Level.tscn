@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/characters/Monster.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/addons/Camera2D.gd" type="Script" id=2]
+
+[node name="Level" type="Node"]
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.393912, 0.0378242, 0.75, 1 )
+
+[node name="Monster" parent="." instance=ExtResource( 1 )]
+position = Vector2( 985, 564 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 960, 540 )
+current = true
+script = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="Camera2D"]

@@ -1,0 +1,102 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://images/leg_greenA.png" type="Texture" id=1]
+[ext_resource path="res://images/mouthA.png" type="Texture" id=2]
+[ext_resource path="res://images/arm_greenA.png" type="Texture" id=3]
+[ext_resource path="res://images/body_greenA.png" type="Texture" id=4]
+[ext_resource path="res://images/body_greenD.png" type="Texture" id=5]
+[ext_resource path="res://images/detail_green_antenna_large.png" type="Texture" id=6]
+[ext_resource path="res://images/eye_cute_light.png" type="Texture" id=7]
+[ext_resource path="res://images/nose_brown.png" type="Texture" id=8]
+
+[node name="Monster" type="Node2D"]
+scale = Vector2( 0.5, 0.5 )
+
+[node name="BodyPosition" type="Position2D" parent="."]
+position = Vector2( 0.390137, -1 )
+
+[node name="BodyGreenA" type="Sprite" parent="BodyPosition"]
+texture = ExtResource( 4 )
+
+[node name="HeadPosition" type="Position2D" parent="."]
+position = Vector2( 15.3901, -274 )
+
+[node name="BodyGreenD" type="Sprite" parent="HeadPosition"]
+position = Vector2( -8, -1 )
+texture = ExtResource( 5 )
+
+[node name="EyeLeftPosition" type="Position2D" parent="HeadPosition"]
+
+[node name="EyeCuteLight" type="Sprite" parent="HeadPosition/EyeLeftPosition"]
+position = Vector2( -94, -33 )
+texture = ExtResource( 7 )
+flip_h = true
+
+[node name="EyeRightPosition" type="Position2D" parent="HeadPosition"]
+position = Vector2( 86, -35 )
+
+[node name="EyeCuteLight" type="Sprite" parent="HeadPosition/EyeRightPosition"]
+position = Vector2( 1, 2 )
+texture = ExtResource( 7 )
+
+[node name="AntennaLeftPosition" type="Position2D" parent="HeadPosition"]
+position = Vector2( -98, -178 )
+
+[node name="DetailGreenAntennaLarge" type="Sprite" parent="HeadPosition/AntennaLeftPosition"]
+position = Vector2( 0, 5 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="AntennaRightPosition" type="Position2D" parent="HeadPosition"]
+position = Vector2( 63, -181 )
+
+[node name="DetailGreenAntennaLarge" type="Sprite" parent="HeadPosition/AntennaRightPosition"]
+position = Vector2( 11, -8 )
+texture = ExtResource( 6 )
+
+[node name="MouthPosition" type="Position2D" parent="HeadPosition"]
+position = Vector2( -11.3901, 106 )
+
+[node name="MouthA" type="Sprite" parent="HeadPosition/MouthPosition"]
+position = Vector2( 5, 5 )
+texture = ExtResource( 2 )
+
+[node name="NosePosition" type="Position2D" parent="HeadPosition"]
+position = Vector2( -9.39014, 26 )
+
+[node name="NoseBrown" type="Sprite" parent="HeadPosition/NosePosition"]
+position = Vector2( 2.60986, 8 )
+texture = ExtResource( 8 )
+
+[node name="LegLeftPosition" type="Position2D" parent="."]
+position = Vector2( -124.61, 170 )
+
+[node name="LegGreenA" type="Sprite" parent="LegLeftPosition"]
+position = Vector2( -11, 113 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="LegRightPosition" type="Position2D" parent="."]
+position = Vector2( 142.39, 164 )
+rotation = 0.0520875
+
+[node name="LegGreenA" type="Sprite" parent="LegRightPosition"]
+position = Vector2( 21, 120 )
+texture = ExtResource( 1 )
+
+[node name="ArmLeftPosition" type="Position2D" parent="."]
+position = Vector2( -162.61, -46 )
+rotation = 0.150967
+
+[node name="ArmGreenA" type="Sprite" parent="ArmLeftPosition"]
+position = Vector2( -38, 127 )
+texture = ExtResource( 3 )
+flip_h = true
+
+[node name="ArmRightPosition" type="Position2D" parent="."]
+position = Vector2( 161.39, -46 )
+rotation = -0.346176
+
+[node name="ArmGreenA" type="Sprite" parent="ArmRightPosition"]
+position = Vector2( 38, 124 )
+texture = ExtResource( 3 )
